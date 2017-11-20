@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<title>Validate Field</title>
+<style>
+body{
+background-color:Aqua;
+font-size:19px;
+}
+
+section{
+border: 13px solid white;
+width: 400px;
+}
+h1{
+color: white;
+text-align: center;
+}
+table{width: 400px;}
+</style>
+
+<script>
+function myFunction() {
+    document.getElementById("myText").innerHTML.readOnly = true;
+}
+</script>
+</head>
+
+</body><center>
+<h1>Product Details </h1>
+<section>
+<table>
+<form>
+<tr>
+<td> Category:</td>
+<td> 
+<select>
+<option>Electronic</option>
+<option>Grocery</option>
+</section>
+</td>
+</tr>
+
+<tr>
+<td> Product:</td>
+<td> 
+<select>
+<option>--------</option>
+</section>
+</td>
+</tr>
+
+<tr>
+<td> Quantity:</td>
+<td> <input type="text"></td>
+</tr>
+
+<tr>
+<td> Total Price:</td>
+<td> <input type="text"  id="myText"></td>
+</tr>
+<tr><td>
+<button onclick="myFunction()">Submit</button></td>
+<td>
+<button type="reset">Clear</button></td>
+</td></tr>
+</form>
+</table>
+</section>
+</center>
+</body>
+</html>

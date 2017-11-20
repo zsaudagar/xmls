@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Regular Expression</title>
+<style>
+td{float:left; font-size:19px;}
+input{float:left; border-left: 2px solid #ccc;}
+.button{margin:5px; }
+</style>
+
+    <script language="javascript">
+        function validateForm() {
+            var x = new RegExp(document.getElementById("t1").value);
+            var y = (document.getElementById("t2").value);
+            if (x.test(y)) {
+                alert("Matched");
+            }
+            else {
+                alert("Not Matched");
+            }
+        }
+        function show() {
+            var x = new RegExp(document.getElementById("t1").value);
+            var y = (document.getElementById("t2").value);
+            var c = x.exec(y);
+            alert("match at position: " + c);
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+    <table>
+        <tr>
+            <td>
+                Regexp:
+            </td>
+            <td>
+                <input type="text" id="t1" name="in1" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Subject string:
+            </td>
+            <td>
+                <input type="text" id="t2" name="in2" />
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" align="center">
+                <input class="button" type="button" value="Testmatch" onclick="validateForm()" />
+                <input class="button" type="button" value="Showmatch" onclick="show()" />
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
